@@ -1,4 +1,5 @@
 # Example app for CI Hexlet course
+[![main_workflow](https://github.com/RCFixer/hexlet-ci-app/actions/workflows/main_workflow.yml/badge.svg)](https://github.com/RCFixer/hexlet-ci-app/actions/workflows/main_workflow.yml)
 
 Starting boilerplate of [Strapi](https://strapi.io/) application
 
