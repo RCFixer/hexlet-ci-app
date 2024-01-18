@@ -9,8 +9,13 @@ jobs:
     build:
         runs-on: ubuntu-latest        
         steps:
+            - name: Checkout repository
               uses: actions/checkout@v4
-              run: make setup
-              run: make start
+            - name: Setup project
+              run: |
+                make setup &&
+                make start
+            - name: Run test
               run: make test
+            - name: Run linter
               run: make lint
