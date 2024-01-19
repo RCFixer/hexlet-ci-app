@@ -11,6 +11,14 @@ jobs:
         steps:
             - name: Checkout repository
               uses: actions/checkout@v4
+            - name: Run Snyk to check for vulnerabilities
+              uses: snyk/actions/node@master
+              env:
+                SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+            - uses: actions/setup-node@v4
+              with:
+                node-version: 18
+                cache: 'npm'
             - name: Setup project
               run: make setup
             - name: Run test
